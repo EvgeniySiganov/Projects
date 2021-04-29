@@ -39,7 +39,7 @@ public class OrderLock {
                         }
                     });
                     threadInner.start();
-                    //spinning until threadInner is blocked
+                    //spinning until threadInner is don`t blocked
                     while (threadInner.getState() != Thread.State.BLOCKED) {
                         //let's get out of loop the main thread
                         isInnerThreadBlocked = true;
